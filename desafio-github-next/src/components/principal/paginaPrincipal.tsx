@@ -7,18 +7,17 @@ import { toast } from 'react-toastify';
 
 export default function Principal() {
 
-    const [username, setUsername] = useState<String>("");
+    const [username, setUsername] = useState("");
     const router = useRouter();
 
     async function pesquisarRepos() {
         const resp = await fetch(`https://api.github.com/users/${username}/repos`);
-        const data = await resp.json(); 
+        const data = await resp.json();
         if (username) {
             if (resp.ok)
                 router.push("/userRepos");
-            else {
+            else 
                 toast("Usuário não encontrado");
-            }
         }
     }
 
