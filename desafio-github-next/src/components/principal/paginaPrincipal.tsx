@@ -36,7 +36,7 @@ export default function Principal() {
                     placeholder="Usuário"
                 />
                 <button 
-                    className="bg-[#416BAB] w-[20.5rem] h-[3.5rem] rounded-[1rem] text-xl" onClick={pesquisarRepos}>
+                    className="botao" onClick={pesquisarRepos}>
                     Pesquisar Repositórios
                 </button>
             </div>

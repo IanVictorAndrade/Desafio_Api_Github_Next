@@ -1,0 +1,4 @@
+.botao {
+    @apply bg-[#416BAB] w-[20.5rem] h-[3.5rem] rounded-[1rem] text-xl;
+    @apply hover:bg-[#095bad];
+}
