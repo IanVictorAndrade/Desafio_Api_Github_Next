@@ -1,25 +1,13 @@
 import Image from "next/image";
 import github from "@/public/github.svg";
-import { useState } from "react";
-import { useRouter } from 'next/router';
 import 'react-toastify/dist/ReactToastify.css';
-import { toast } from 'react-toastify';
+import { useUser } from "@/src/contexts/userContext";
+
 
 export default function Principal() {
+     const { setUsername ,pesquisarRepos } = useUser()
 
-    const [username, setUsername] = useState("");
-    const router = useRouter();
 
-    async function pesquisarRepos() {
-        const resp = await fetch(`https://api.github.com/users/${username}/repos`);
-        const data = await resp.json();
-        if (username) {
-            if (resp.ok)
-                router.push("/userRepos");
-            else 
-                toast("Usuário não encontrado");
-        }
-    }
 
     return (
         <div className="flex flex-col gap-10">
