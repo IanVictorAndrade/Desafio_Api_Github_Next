@@ -1,4 +1,4 @@
 .botao {
-    @apply p-2 bg-[#416BAB] w-[20.5rem] h-[3.5rem] rounded-[1rem] text-xl;
+    @apply p-3 bg-[#416BAB] rounded-[1rem] text-xl;
     @apply hover:bg-[#095bad] text-amber-50;
 }

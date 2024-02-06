@@ -10,6 +10,8 @@ interface Repo {
     name: string;
     html_url: string;
     description: string;
+    user_name: string;
+    avatar: string;
 }
 
 export default function UserPage() {
@@ -24,7 +26,9 @@ export default function UserPage() {
                         return {
                             name: repo.name,
                             html_url: repo.html_url,
-                            description: repo.description
+                            description: repo.description,
+                            user_name: repo.owner.login,
+                            avatar: repo.owner.avatar_url
                         };
                     });
                     setRepos(reposData);
@@ -37,12 +41,12 @@ export default function UserPage() {
 
     return (
         <>
-            <div className="gap-4">
+            <div className="flex flex-col justify-center items-center gap-4">
                 <Image src={github} width={118} height={32} className="mt-16" alt="" />
-                <div className="flex justify-center items-center">
-                    <img src="" alt="" />
-                    <a></a>
-                </div>
+                    <div className="flex justify-center items-center gap-3">
+                        <img src={repos[0].avatar} className="w-[3.75rem] h-[3.75rem] rounded-3xl" alt="foto do usuário" />
+                        <p className="text-2xl font-bold">{repos[0].user_name}</p>
+                    </div>
             </div>
             <section className="grid grid-cols-3 gap-[2rem] justify-center items-center w-[75%] m-auto mb-[30%]">
                 {repos.map((repo) => (
