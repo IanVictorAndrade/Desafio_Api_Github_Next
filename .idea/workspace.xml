@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="443bcaf1-2457-4599-a9ef-46739988c5ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/desafio-github-next/src/components/repoCard/RepoCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/desafio-github-next/src/components/repoCard/RepoCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/desafio-github-next/src/components/userPage/userPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/desafio-github-next/src/components/userPage/userPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/ianvictor/Downloads/Desafio_Api_Github_Next",
+    "last_opened_file_path": "/home/ianvictor/Downloads/Desafio",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -52,6 +53,7 @@
       <updated>1707133655496</updated>
       <workItem from="1707133656830" duration="15000" />
       <workItem from="1707133768840" duration="8227000" />
+      <workItem from="1707219939805" duration="1971000" />
     </task>
     <servers />
   </component>
