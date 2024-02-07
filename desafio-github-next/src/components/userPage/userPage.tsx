@@ -10,7 +10,7 @@ interface Repo {
     html_url: string;
     description: string;
     user_name: string;
-    avatar_url: string; // Corrigido o tipo para string
+    avatar_url: string;
 }
 
 export default function UserPage() {
@@ -49,7 +49,16 @@ export default function UserPage() {
                     </div>
                 )}
             </div>
-            <section className="grid grid-cols-3 gap-[2rem] justify-center items-center w-[75%] m-auto mb-[30%]">
+            <section className={`
+            grid grid-cols-3 gap-[2rem] justify-center items-center w-[80%] mb-[20%]
+            2xl:grid-cols-3 2xl:w-[80%] 2xl:gap-[2rem]
+            xl:grid-cols-3 xl:w-[90%] 
+            lg:grid-cols-2 lg:w-[90%] lg:gap-[2rem] 
+            md:grid-cols-2 md:w-[90%] md:gap-[2rem]
+            sm:grid-cols-1 sm:w-[90%] sm:gap-[2rem] sm:mb-[20%] 
+            xs:grid-cols-1 xs:w-[90%] xs:gap-[2rem] xs:mb-[20%]
+            tsm:grid-cols-1 tsm:w-[90%] tsm:gap-[2rem] tsm:mb-[20%]
+            `}>
                 {repos.map((repo) => (
                     <RepoCard key={repo.name} name={repo.name} description={repo.description} html_url={repo.html_url}/>
                 ))}
