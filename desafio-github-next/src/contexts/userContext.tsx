@@ -13,7 +13,6 @@ const UserContexto = createContext<UserContextProps>({} as any);
 export default UserContexto;
 
 export function UserProvider(props: any) {
-    const [user, setUser] = useState();
     const [username, setUsername] = useState("");
     const router = useRouter();
 

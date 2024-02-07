@@ -4,6 +4,7 @@ import RepoCard from "@/src/components/repoCard/RepoCard";
 import { toast } from "react-toastify";
 import github from "@/public/github.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Repo {
     name: string;
@@ -40,11 +41,17 @@ export default function UserPage() {
 
     return (
         <>
+            <div className="flex justify-start w-screen">
+            <Link href={"/"}>
+                <span className="flex m-4 botao">Voltar</span>
+            </Link>
+            </div>
             <div className="flex flex-col justify-center items-center gap-4">
-                <Image src={github} width={118} height={32} className="mt-16" alt="" />
+                <Image src={github} width={118} height={32} alt=""/>
                 {repos.length > 0 && (
                     <div className="flex justify-center items-center gap-3">
-                        <img src={repos[0].avatar_url} className="w-[3.75rem] h-[3.75rem] rounded-3xl" alt="foto do usuário" />
+                        <img src={repos[0].avatar_url} className="w-[3.75rem] h-[3.75rem] rounded-3xl"
+                             alt="foto do usuário"/>
                         <p className="text-2xl font-bold">{repos[0].user_name}</p>
                     </div>
                 )}
